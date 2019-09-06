@@ -9,7 +9,16 @@
 </head>
 
 <body>
-    <h1>hi</h1>
+    <h1>Psychic Guessing Game</h1>
+  <span  id="directions-text">
+      <h2>Are you Psychic? Guess a letter.</h2>
+  </span> 
+      
+    <div class="game-box">
+        <p id="wins-text"></p>
+        <p id="losses-text"></p>
+        <p id="guesses-left-text"></p>
+    </div>
     <script>
         var correctAnswer
         var userGuess
@@ -22,6 +31,11 @@
         var guess = 0
         var guessLeft = 9;
 
+        var directionsText= document.getElementById("directions-text");
+        var winsText= document.getElementById("wins-text");
+        var lossesText= document.getElementById("losses-text");
+        var guessLeftText= document.getElementById("guesses-left-text");
+        
 
 
         var correctAnswer= possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
@@ -59,7 +73,11 @@
              }
              }
 
-            
+            directionsText.textContent= " ";
+            winsText.textContent="Wins: "+ wins;
+            lossesText.textContent="Losses: "+ losses;
+            guessLeftText.textContent="Guesses Left: "+ guessLeft;
+
 
         }//end .onkeyup=function(event)
 
