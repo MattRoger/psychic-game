@@ -6,82 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Prosto+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Psychic Guessing Game</h1>
-  <span  id="directions-text">
-      <h2>Are you Psychic? Guess a letter.</h2>
-  </span> 
-      
-    <div class="game-box">
-        <p id="wins-text"></p>
-        <p id="losses-text"></p>
-        <p id="guesses-left-text"></p>
-    </div>
-    <script>
-        var correctAnswer
-        var userGuess
-        var possibleAnswer = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", 
-        "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-        var answer
-        var wins = 0;
-        var losses = 0;
-        var guess = 0
-        var guessLeft = 9;
-
-        var directionsText= document.getElementById("directions-text");
-        var winsText= document.getElementById("wins-text");
-        var lossesText= document.getElementById("losses-text");
-        var guessLeftText= document.getElementById("guesses-left-text");
+    <div class="wrapper">
+        <h1>Are you a Psychic?</h1>
+        <span id="directions-text">
+            <h2>Are you Psychic? Guess a letter.</h2>
+        </span>
         
-
-
-        var correctAnswer= possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
-        document.onkeyup = function (event) {
-            var userGuess= event.key;
-            console.log("random letter is " + correctAnswer)
-            if(userGuess===correctAnswer){
-                console.log("You guessed correctly")
-                wins++
-                correctAnswer= possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
-               guessLeft=9
-                console.log("wins: " + wins)
-                console.log("Losses: " + losses)
-                console.log("Guesses Left "+ guessLeft)
-
-
-            }else{
-                console.log("You guessed wrong")
-                losses++
-                guessLeft--
-                console.log("wins: " + wins)
-                console.log("Losses: " + losses)
-                console.log("Guesses Left "+ guessLeft)
-            }
-            if(guessLeft===0){
-                console.log("you loose")
-                var playAgain= confirm("Play Again?")
-                if(playAgain===true){
-                wins=0;
-                losses=0;
-                guessLeft=9;
-                console.log("wins: " + wins)
-                console.log("Losses: " + losses)
-                console.log("Guesses Left "+ guessLeft)
-             }
-             }
-
-            directionsText.textContent= " ";
-            winsText.textContent="Wins: "+ wins;
-            lossesText.textContent="Losses: "+ losses;
-            guessLeftText.textContent="Guesses Left: "+ guessLeft;
-
-
-        }//end .onkeyup=function(event)
-
-    </script>
+        <div class="game-box">
+            <p id="wins-text"></p>
+            <p id="losses-text"></p>
+            <p id="guesses-left-text"></p>
+        </div>
+    </div>
 </body>
 
+<script src="assets/script.js"></script>
 </html>

@@ -1,4 +1,6 @@
 
+
+
 var correctAnswer
 var userGuess
 var possibleAnswer = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",
@@ -26,7 +28,7 @@ document.onkeyup = function (event) {
         wins++
         correctAnswer = possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
         guessLeft = 9
-        console.log("wins: " + wins)
+        console.log("\n"+"wins: " + wins)
         console.log("Losses: " + losses)
         console.log("Guesses Left " + guessLeft)
 
@@ -35,7 +37,7 @@ document.onkeyup = function (event) {
         console.log("You guessed wrong")
         losses++
         guessLeft--
-        console.log("wins: " + wins)
+        console.log("\n"+"wins: " + wins)
         console.log("Losses: " + losses)
         console.log("Guesses Left " + guessLeft)
     }
@@ -46,7 +48,7 @@ document.onkeyup = function (event) {
             wins = 0;
             losses = 0;
             guessLeft = 9;
-            console.log("wins: " + wins)
+            console.log("+\n"+"wins: " + wins)
             console.log("Losses: " + losses)
             console.log("Guesses Left " + guessLeft)
         }
