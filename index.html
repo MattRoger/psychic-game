@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hi</h1>
+    <script>
+        var correctAnswer
+        var userGuess
+        var possibleAnswer = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", 
+        "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+        var answer
+        var wins = 0;
+        var losses = 0;
+        var guess = 0
+        var guessLeft = 9;
+
+
+
+        document.onkeyup = function (event) {
+            var userGuess= event.key;
+            var correctAnswer= possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
+            console.log("random letter is " + correctAnswer)
+            if(userGuess===correctAnswer){
+                console.log("You guessed correctly")
+
+            }else{
+                console.log("You guessed wrong")
+            }
+
+
+        }//end .onkeyup=function(event)
+
+
+    </script>
+</body>
+
+</html>
