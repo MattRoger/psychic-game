@@ -24,20 +24,44 @@
 
 
 
+        var correctAnswer= possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
         document.onkeyup = function (event) {
             var userGuess= event.key;
-            var correctAnswer= possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
             console.log("random letter is " + correctAnswer)
             if(userGuess===correctAnswer){
                 console.log("You guessed correctly")
+                wins++
+                correctAnswer= possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
+               guessLeft=9
+                console.log("wins: " + wins)
+                console.log("Losses: " + losses)
+                console.log("Guesses Left "+ guessLeft)
+
 
             }else{
                 console.log("You guessed wrong")
+                losses++
+                guessLeft--
+                console.log("wins: " + wins)
+                console.log("Losses: " + losses)
+                console.log("Guesses Left "+ guessLeft)
             }
+            if(guessLeft===0){
+                console.log("you loose")
+                var playAgain= confirm("Play Again?")
+                if(playAgain===true){
+                wins=0;
+                losses=0;
+                guessLeft=9;
+                console.log("wins: " + wins)
+                console.log("Losses: " + losses)
+                console.log("Guesses Left "+ guessLeft)
+             }
+             }
 
+            
 
         }//end .onkeyup=function(event)
-
 
     </script>
 </body>
