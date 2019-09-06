@@ -1,0 +1,36 @@
+body{
+    background-image: url("../assets/img/fortune\ teller\ 1.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+h1,
+h2{
+    color:#8FE388;
+    font-family: 'Prosto One', cursive;
+    
+}
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 1.8rem;
+}
+p{
+    color:white;
+    font-family: 'Prosto One', cursive;
+    font-size: 1.5rem;
+}
+#losses-text{
+    color:#FFD447;
+}
+#guesses-left-text{
+    color:#FF934F;
+}
+#wins-text{
+    color:#1BE7FF;
+}
+
+.wrapper{
+    margin:4% 6%;
+    width:35%;
+}
