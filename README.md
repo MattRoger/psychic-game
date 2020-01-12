@@ -7,7 +7,7 @@
 This was one of the first JavaScript pages I made.
 
 ## Build Status
-Complete :checkered_flag
+Complete :checkered_flag:
 
 ## Code style
 Vanilla JavaScript :icecream:
