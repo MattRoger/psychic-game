@@ -14,7 +14,6 @@ Vanilla JavaScript :icecream:
 
 ## Tech/framework used
 JavaScript and basic HTML and CSS
-## Features
 
 ## Installation
 * :trident: Fork it
