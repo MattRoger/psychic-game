@@ -1,5 +1,5 @@
 # Psychic Game :crystal_ball:
- ### Deployed https://mattroger.github.io/psychic-game/
+ [See it Live](https://mattroger.github.io/psychic-game/)
  
  Player Must guess a letter. Each time the player has 9 guesses.
 
