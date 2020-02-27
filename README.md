@@ -1,15 +1,30 @@
 # Psychic Game :crystal_ball:
+A game where the user has to try and guess a letter randomly chosen by the computer. The player only gets nine chances to guess right.
+
  [See it Live](https://mattroger.github.io/psychic-game/)
  
-
 ## Motivation
 This was one of the first JavaScript pages I made.
+
+## How to use?
+ * Player Must guess a letter.
+ * Simply  hit any letter on the keyboard
+ * Each time the player has 9 guesses.
+ 
+ ## Tech/framework used
+* JavaScript
+* HTML
+* CSS
 
 ## Build Status
 Complete :checkered_flag:
 
 ## Code style
 Vanilla JavaScript :icecream:
+ 
+The Game In Action
+![gameplay](https://github.com/MattRoger/screenshots/blob/master/psychic/gameplay.gif?raw=true)
+
 How the game works
 ```javascript
 var correctAnswer = possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
@@ -50,17 +65,11 @@ document.onkeyup = function (event) {
     guessLeftText.textContent = "Guesses Left: " + guessLeft;
 }
 ```
-## Tech/framework used
-JavaScript and basic HTML and CSS
 
 ## Installation
 * :trident: Fork it
 * :sheep: Clone it
 
-## How to use?
- * Player Must guess a letter. 
- * Each time the player has 9 guesses.
- * Simply  hit any letter on the keyboard
 
 ## Credits / Contact information
 * @MattRoger 
